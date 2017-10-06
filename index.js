@@ -4,4 +4,5 @@ var exec = require('child_process').exec;
 http.createServer((req, res) => {
 	exec("fuser -k -n tcp 3000");
 	exec("cd ~/shopping-friday-api && npm run start:production");
+	res.end("ended");
 }).listen(3001);
